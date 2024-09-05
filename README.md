@@ -20,7 +20,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
         with:
-          args: " -f <folder-path> -b <bucket-name>"
+          args: " -f ${{ secrets.FOLDER }} -b ${{ secrets.BUCKET }}"
 ```
 
 ### AWS Secrets Setup:
