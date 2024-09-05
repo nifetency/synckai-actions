@@ -3,8 +3,6 @@
 
 ## Usage
 
-You can automate the building and push of your Docker image using GitHub Actions. Here’s an example workflow that builds the Docker image and pushes it to Docker Hub:
-
 ```bash
 name: Deploy to Oikps
 on: [push]
