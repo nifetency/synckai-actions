@@ -1,6 +1,6 @@
 
 # Synckai
-Synckai is a utility designed to synchronize your folder to an S3 bucket. It automates syncing build files to Amazon S3 after a successful GitHub action run.|
+Synckai is a utility designed to synchronize your folder to an S3 bucket. It automates syncing build files to Amazon S3 after a successful GitHub action run.
 
 ## Usage
 Add the following configuration to your .github/workflows/main.yml
@@ -27,11 +27,11 @@ jobs:
 ### AWS Secrets Setup
 To use Synckai, make sure you add the following secrets in your GitHub repository settings:
 
-AWS_ACCESS_KEY_ID: Your AWS Access Key ID
-AWS_SECRET_ACCESS_KEY: Your AWS Secret Access Key
-AWS_REGION: Your AWS Region (e.g., us-east-1)
-FOLDER: The folder path to sync
-BUCKET: The name of your S3 bucket
+- AWS_ACCESS_KEY_ID: Your AWS Access Key ID
+- AWS_SECRET_ACCESS_KEY: Your AWS Secret Access Key
+- AWS_REGION: Your AWS Region (e.g., us-east-1)
+- FOLDER: The folder path to sync
+- BUCKET: The name of your S3 bucket
 
 
 
