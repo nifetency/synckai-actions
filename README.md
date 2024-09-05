@@ -4,7 +4,7 @@
 ## Usage
 
 ```bash
-name: Deploy to Oikps
+name: Deploy to Oikos
 on: [push]
 jobs:
   deploy:
@@ -16,11 +16,11 @@ jobs:
       # This step runs `synckai sync`.
       - uses: nifetency/synckai-actions@1.0 
         env:
-          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_TOKEN: ${{ secrets.AWS_SECRET_TOKEN }}
-          REGION: ${{ secrets.REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
         with:
-          args: "deploy"
+          args: " -f <folder-path> -b <bucket-name>"
 ```
 
 ### AWS Secrets Setup:
