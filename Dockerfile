@@ -1,15 +1,16 @@
-FROM alpine
+FROM ubuntu:latest
 
-RUN apk add --no-cache curl
+# Install necessary packages
+RUN apt-get update && apt-get install -y curl dos2unix
 
-RUN curl -L https://github.com/nifetency/synckai-release/releases/download/S3/Synckai-linux -o Synckai-linux
+# Download the Synckai-linux binary and make it executable
+RUN curl -L -o /usr/local/bin/Synckai-linux https://github.com/nifetency/synckai-release/releases/download/S3/Synckai-linux \
+    && chmod +x /usr/local/bin/Synckai-linux
 
+# Copy entrypoint script and convert it to Unix format
 COPY entrypoint.sh /entrypoint.sh
+RUN dos2unix /entrypoint.sh \
+    && chmod +x /entrypoint.sh
 
-RUN apk add dos2unix && dos2unix /entrypoint.sh
-
-RUN ["chmod", "+x", "/entrypoint.sh"]
-
-RUN pwd && ls -ltr
-
+# Set the entrypoint
 ENTRYPOINT [ "/entrypoint.sh" ]
