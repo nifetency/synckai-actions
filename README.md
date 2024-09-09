@@ -10,11 +10,11 @@ To use Synckai, follow these steps:
 Copy the following configuration into a file named `.github/workflows/main.yml` in your repository:
 
 ```bash
-name: Deploy to Oikos
+name: sync to s3
 on: [push]
 jobs:
   deploy:
-    name: Deploy proxy
+    name: sync
     runs-on: ubuntu-latest
     steps:
       # This step checks out a copy of your repository.
