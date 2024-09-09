@@ -33,10 +33,10 @@ This configuration sets up a GitHub Actions workflow that triggers on every push
 ### 2. Setup AWS Secrets
 To ensure Synckai can access your S3 bucket, you need to configure the following secrets in your GitHub repository settings:
 
-AWS_ACCESS_KEY_ID: Your AWS Access Key ID
-AWS_SECRET_ACCESS_KEY: Your AWS Secret Access Key
-AWS_REGION: Your AWS Region (e.g., us-east-1)
-BUCKET: The name of your S3 bucket
+- AWS_ACCESS_KEY_ID: Your AWS Access Key ID
+- AWS_SECRET_ACCESS_KEY: Your AWS Secret Access Key
+- AWS_REGION: Your AWS Region (e.g., us-east-1)
+- BUCKET: The name of your S3 bucket
 
 Make sure that these credentials have the necessary permissions to write to the S3 bucket.
 
