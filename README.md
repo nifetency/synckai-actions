@@ -20,7 +20,7 @@ jobs:
       # This step checks out a copy of your repository.
       - uses: actions/checkout@v2
       # This step runs `synckai sync`.
-      - uses: nifetency/synckai-actions@v1.0.1
+      - uses: nifetency/synckai-actions@v1.0.2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
