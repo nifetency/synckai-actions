@@ -14,7 +14,7 @@ name: sync to s3
 on: [push]
 jobs:
   deploy:
-    name: sync
+    name: synckai
     runs-on: ubuntu-latest
     steps:
       # This step checks out a copy of your repository.
